@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-RUN apt-get upadte && apt-get install -y git vim curl unzip gcc make wget tar bzip2 subversion bison flex openssl libssl-dev wget sudo
+RUN apt-get update && apt-get install -y git vim curl unzip gcc make wget tar bzip2 subversion bison flex openssl libssl-dev wget sudo
 
 RUN echo "Installing Ruby"
 
