@@ -13,6 +13,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Get commit id
-      run: echo "::set-output name=sha::$(git rev-parse HEAD)"
+      run: echo "/usr/bin/git log -1 | grep commit"
     - name: Build the Docker image
       run: docker build . --file Dockerfile 
