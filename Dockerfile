@@ -9,5 +9,6 @@ RUN cd /root && wget http://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.1.tar.gz &
 RUN cd /root/ruby-2.7.1 && ./configure && make && sudo -E make install
 ENV PATH /usr/local/bin:$PATH
 RUN ruby -v
+
 CMD ["ruby","-v"]
 
