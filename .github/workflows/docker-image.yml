@@ -13,6 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Get commit id
-      run: echo "/usr/bin/git log -1 | grep commit"
+      run: git diff --name-only HEAD HEAD~1
     - name: Build the Docker image
-      run: docker build . --file Dockerfile 
+      run: docker build . --file $(git diff --name-only HEAD HEAD~1) 
+
